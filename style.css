@@ -1,0 +1,38 @@
+:root{
+  --bg:#fff7f8;
+  --card:#fff;
+  --accent:#ff9fb1;
+  --accent-2:#ffd7e0;
+  --text:#2b2b2b;
+  --muted:#6f6f6f;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;background:linear-gradient(180deg,var(--bg),#fff);color:var(--text)}
+.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px}
+.card{width:100%;max-width:980px;background:var(--card);border-radius:18px;box-shadow:0 12px 40px rgba(233,147,163,0.12);padding:32px;position:relative;overflow:hidden;border:1px solid rgba(0,0,0,0.03)}
+.badge{position:absolute;left:32px;top:-30px;width:96px;height:96px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,#ff9fb1);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:36px;box-shadow:0 8px 24px rgba(255,159,177,0.18)}
+.title{margin:4px 0 6px 0;font-size:28px;letter-spacing:0.2px}
+.subtitle{margin:0 0 20px 0;color:var(--muted)}
+.msg-area{background:linear-gradient(180deg, rgba(255,250,250,0.9), rgba(255,245,247,0.9));padding:18px;border-radius:12px;border:1px solid rgba(255,150,170,0.08);min-height:160px;line-height:1.6;font-size:16px;color:var(--text)}
+.controls{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600;box-shadow:0 6px 18px rgba(255,159,177,0.12)}
+.btn.outline{background:transparent;color:var(--accent);border:1px solid rgba(255,159,177,0.22);box-shadow:none}
+.footer{margin-top:18px;color:var(--muted);font-size:13px}
+
+/* petals */
+.decor{position:absolute;right:-80px;bottom:-40px;pointer-events:none}
+.petal{width:220px;height:220px;border-radius:50%;position:absolute;opacity:0.15;background:radial-gradient(circle at 30% 30%,var(--accent),var(--accent-2))}
+.petal1{transform:rotate(15deg);right:0;bottom:20px}
+.petal2{transform:rotate(-10deg);right:80px;bottom:120px;opacity:0.12}
+.petal3{transform:rotate(30deg);right:-20px;bottom:180px;opacity:0.08}
+
+/* small screen */
+@media(max-width:720px){
+  .card{padding:20px}
+  .badge{left:18px;top:-22px;width:76px;height:76px;font-size:28px}
+  .title{font-size:22px}
+  .msg-area{font-size:15px}
+}
+
+/* tiny animation for heart-like emphasis */
+.emph{display:inline-block;background:linear-gradient(90deg,#ff9fb1,#ffd7e0);padding:4px 8px;border-radius:8px}
